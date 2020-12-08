@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+}
+
+html,
+body {
+  min-height: 100vh;
+  background: #f6f6f7 url("./img/car-bg.svg") no-repeat bottom right / 40rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 3.2rem 1%;
+}
+
+.logo {
+  margin-bottom: 3.2rem;
+  font-size: 4.8rem;
+  font-weight: 500;
+  text-align: center;
+  color: #2f3640;
+}
+
+form {
+  background: #f1f2f6;
+  padding: 3.2rem;
+  border-radius: 0.6rem;
+}
+
+form label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #2f3640;
+}
+
+form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.4rem;
+  border: 1px solid #e5e6e9;
+  border-radius: 0.6rem;
+  outline: none;
+  font-size: 1.4rem;
+  color: #2f3640;
+}
+
+form input.invalid {
+  border-color: #ff4757;
+}
+
+form > div + div {
+  margin-top: 1.2rem;
+}
+
+.data-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.datas-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.datas-container > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.datas-container > div:first-child {
+  margin-right: 1.6rem;
+}
+
+.btn-register {
+  background: #2ed573;
+  width: 100%;
+  margin-top: 3.2rem;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.btn-register:hover {
+  background: #7bed9f;
+}
+
+table {
+  width: 100%;
+  padding: 3.2rem;
+  margin-top: 3.2rem;
+  border-radius: 0.8rem;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+table th,
+table td {
+  padding: 1.2rem;
+  border-bottom: 1px solid #e5e6e9;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #2f3640;
+}
+
+table td .btn-delete {
+  background: #ff4757;
+  width: 50%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s;
+}
+
+table td .btn-delete:hover {
+  background: #ff6b81;
+}
+
+table th {
+  background: #f1f2f6;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 720px) {
+  .datas-container {
+    display: block;
+  }
+
+  .datas-container > div + div {
+    margin-top: 1.2rem;
+  }
+
+  .datas-container > div:first-child {
+    margin: 0;
+  }
+
+  table {
+    padding: 0;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table,
+  table tbody,
+  table tr,
+  table td {
+    display: block;
+    width: 100%;
+  }
+
+  table tr {
+    background: rgba(241, 242, 246, 0.85);
+    padding: 0 3.2rem;
+  }
+
+  table tr + tr {
+    margin-top: 1.6rem;
+  }
+
+  table td {
+    position: relative;
+    text-align: right;
+    font-size: 1.4rem;
+    padding-left: 50%;
+  }
+
+  table td:last-child {
+    border: none;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    font-weight: 500;
+    text-align: left;
+  }
+}
